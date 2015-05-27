@@ -2,6 +2,8 @@ package com.zinibu.common;
 
 public class FirstSample {
 
+    public static final int SIX_FOR_ALL = 6;
+
     public static void main(String[] args) {
         System.out.println("Hi, we are starting");
 
@@ -20,8 +22,8 @@ public class FirstSample {
             System.out.println("i = " + i);
         }
 
-    }
+        // Now, let's test arrays.
 
-    public static final int SIX_FOR_ALL = 6;
+    }
 
 }
