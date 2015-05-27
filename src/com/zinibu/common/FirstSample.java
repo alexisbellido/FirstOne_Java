@@ -1,5 +1,8 @@
 package com.zinibu.common;
 
+import com.zinibu.sports.SoccerTeam;
+
+import java.awt.*;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -60,11 +63,18 @@ public class FirstSample {
 
         Date someDay = new Date();
         System.out.println(someDay);
+        Date cloneOfSomeDay = (Date) someDay.clone();
+        System.out.println("This is a clone of a Date object: " + cloneOfSomeDay);
 
         Vehicle enterprise = new Vehicle("SS Enterpise", 5000);
         Vehicle maxFive = new Vehicle("Max 5", 100);
         System.out.println("Spaceship is called: " + enterprise.getName());
         System.out.println("Car is called: " + maxFive.getName());
+
+        SoccerTeam team = new SoccerTeam("Boca Juniors", "Argentina", 11, maxFive);
+        System.out.printf("%s is from %s and has %d players\n", team.getName(), team.getCountry(), team.getPlayers());
+        team.changeToLowerCase();
+        System.out.printf("%s is from %s and has %d players who travel in %s\n", team.getName(), team.getCountry(), team.getPlayers(), team.getTrasnportationName());
 
     }
 
