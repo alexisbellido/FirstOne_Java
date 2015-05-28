@@ -16,6 +16,10 @@ public class SoccerTeam {
         transportation = t;
     }
 
+    public static String popularChant() {
+        return "Ole, ole, ole";
+    }
+
     public String getName() {
         return name;
     }

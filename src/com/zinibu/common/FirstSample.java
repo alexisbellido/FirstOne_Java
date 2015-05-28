@@ -2,7 +2,6 @@ package com.zinibu.common;
 
 import com.zinibu.sports.SoccerTeam;
 
-import java.awt.*;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -75,6 +74,9 @@ public class FirstSample {
         System.out.printf("%s is from %s and has %d players\n", team.getName(), team.getCountry(), team.getPlayers());
         team.changeToLowerCase();
         System.out.printf("%s is from %s and has %d players who travel in %s\n", team.getName(), team.getCountry(), team.getPlayers(), team.getTrasnportationName());
+
+        // Here an example of an static method; it doesn't need an instance of the class so it doesn't have a this parameter.
+        System.out.println(SoccerTeam.popularChant());
 
     }
 
