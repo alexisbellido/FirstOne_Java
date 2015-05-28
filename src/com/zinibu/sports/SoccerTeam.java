@@ -2,6 +2,10 @@ package com.zinibu.sports;
 
 import com.zinibu.common.Vehicle;
 
+/**
+ * A SoccerTeam has a name, belongs to a country, has a number of players
+ * and has a preferred vehicle for transportation.
+ */
 public class SoccerTeam {
 
     private String name;
@@ -9,6 +13,13 @@ public class SoccerTeam {
     private int players;
     private Vehicle transportation;
 
+    /**
+     * Constructs a SoccerTeam
+     * @param n, the name of the team
+     * @param c, its country
+     * @param p, its number of players
+     * @param t, and its preferred vehicle
+     */
     public SoccerTeam(String n, String c, int p, Vehicle t) {
         name = n;
         country = c;
@@ -20,6 +31,10 @@ public class SoccerTeam {
         return "Ole, ole, ole";
     }
 
+    /**
+     * Gets the name of the team
+     * @return name
+     */
     public String getName() {
         return name;
     }
