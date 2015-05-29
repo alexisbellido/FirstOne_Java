@@ -22,6 +22,10 @@ public class FirstSample {
 
         Plane boeing = new Plane();
         boeing.start();
+        boeing.setWings(5);
+        System.out.println("A boeing has " + boeing.getWings() + " wings");
+        boeing.setName("Big Boeing");
+        System.out.println(boeing.getName());
 
         for (int i = 1; i <= 4; i++) {
             System.out.println("i = " + i);
@@ -29,7 +33,7 @@ public class FirstSample {
 
         // Now, let's test arrays.
 
-        int[] a = new int[10];
+        int[] a = new int[3];
         a[0] = 1;
         a[1] = 2;
         for (int i = 0; i < a.length; i++) {
