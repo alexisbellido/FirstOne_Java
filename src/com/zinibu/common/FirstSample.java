@@ -79,9 +79,17 @@ public class FirstSample {
         team.changeToLowerCase();
         System.out.printf("%s is from %s and has %d players who travel in %s\n", team.getName(), team.getCountry(), team.getPlayers(), team.getTrasnportationName());
 
+        runSample();
+
+    }
+
+    /**
+     * Some sample code marked as static because it belongs to the class.
+     */
+    private static void runSample() {
         // Here an example of an static method; it doesn't need an instance of the class so it doesn't have a this parameter.
         System.out.println(SoccerTeam.popularChant());
-
+        System.out.println("running sample");
     }
 
 }
