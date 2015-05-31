@@ -8,6 +8,10 @@ public class Plane extends Vehicle {
         System.out.println("Constructing plane");
     }
 
+    public Plane(String n, int s) {
+        super(n, s);
+    }
+
     public int getWings() {
         return wings;
     }

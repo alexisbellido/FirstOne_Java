@@ -2,6 +2,7 @@ package com.zinibu.common;
 
 import com.zinibu.sports.SoccerTeam;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -90,6 +91,27 @@ public class FirstSample {
         // Here an example of an static method; it doesn't need an instance of the class so it doesn't have a this parameter.
         System.out.println(SoccerTeam.popularChant());
         System.out.println("running sample");
+
+        ArrayList<Integer> randomNumbers = new ArrayList<Integer>();
+        randomNumbers.ensureCapacity(5);
+        randomNumbers.add(4);
+        randomNumbers.add(3);
+        randomNumbers.add(1);
+        System.out.println(randomNumbers.toString());
+
+        ArrayList<Plane> myPlanes = new ArrayList<Plane>(2);
+        myPlanes.add(new Plane("Delta", 2));
+        myPlanes.add(new Plane("United", 4));
+        System.out.println(myPlanes.toString());
+        System.out.println("Number of planes I have: " + myPlanes.size());
+
+        Plane firstPlane = myPlanes.get(0);
+        System.out.println("This is the first plane: " + firstPlane);
+
+        // Replace first plane with second plane
+        myPlanes.set(0, myPlanes.get(1));
+        System.out.println("This is the new first plane: " + myPlanes.get(0));
+
     }
 
 }
