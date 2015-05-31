@@ -76,9 +76,11 @@ public class FirstSample {
         System.out.println("Car is called: " + maxFive.getName());
 
         SoccerTeam team = new SoccerTeam("Boca Juniors", "Argentina", 11, maxFive);
+        team.shoutChants("miau");
         System.out.printf("%s is from %s and has %d players\n", team.getName(), team.getCountry(), team.getPlayers());
         team.changeToLowerCase();
         System.out.printf("%s is from %s and has %d players who travel in %s\n", team.getName(), team.getCountry(), team.getPlayers(), team.getTrasnportationName());
+        team.shoutChants("wow", "yep", "yay");
 
         runSample();
 
@@ -92,6 +94,8 @@ public class FirstSample {
         System.out.println(SoccerTeam.popularChant());
         System.out.println("running sample");
 
+
+        // Less efficient than an array int[], used just for educational purposes
         ArrayList<Integer> randomNumbers = new ArrayList<Integer>();
         randomNumbers.ensureCapacity(5);
         randomNumbers.add(4);

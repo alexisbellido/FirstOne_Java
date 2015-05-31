@@ -77,4 +77,10 @@ public class SoccerTeam {
         name = name.toLowerCase();
         country = country.toLowerCase();
     }
+
+    public void shoutChants(String... chants) {
+        for (String chant: chants) {
+            System.out.println("Chant is: " + chant);
+        }
+    }
 }

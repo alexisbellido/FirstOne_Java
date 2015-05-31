@@ -27,4 +27,5 @@ public class Plane extends Vehicle {
     public void start() {
         System.out.println("This is SIX_FOR_ALL: " + FirstSample.SIX_FOR_ALL);
     }
+
 }
