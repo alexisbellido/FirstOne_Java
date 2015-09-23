@@ -13,15 +13,24 @@ toyota 1997
 See http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html , focus on:
 When classes are stored in a directory (folder), like c:\java\MyClasses\utility\myapp, then the class path entry points to the directory that contains the first element of the package name. (in this case, C:\java\MyClasses, since the package name is utility.myapp.)
 
-Two ways of running algs4 so far:
+===
 
-recommended, passing classpath via -cp:
+Running algs4 classes from the command line:
+
+First,
+cd /home/alexis/IdeaProjects/FirstOne
+
+1. Recommended, passing classpath via -cp:
 java -cp /home/alexis/IdeaProjects/FirstOne/lib/algs4.jar edu.princeton.cs.algs4.BinarySearch ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt 
 
-using CLASSPATH environment variable
+But, this is important, to provide more than one classpath, because I want to modify the source for BinarySearch and recompile it to /home/alexis/IdeaProjects/FirstOne/out/production/FirstOne while using libraries from /home/alexis/IdeaProjects/FirstOne/lib/algs4.jar, compile from IDEA and run from the command line:
+
+java -cp "/home/alexis/IdeaProjects/FirstOne/out/production/FirstOne:/home/alexis/IdeaProjects/FirstOne/lib/algs4.jar" edu.princeton.cs.algs4.BinarySearch ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt
+
+I have the class with the main method in both algs4.jar and as in /home/alexis/IdeaProjects/FirstOne/src and that's important to indicate the order of class paths is important.
+
+2. Using CLASSPATH environment variable
 export CLASSPATH=/home/alexis/IdeaProjects/FirstOne/lib/algs4.jar
 echo $CLASSPATH
 java edu.princeton.cs.algs4.BinarySearch ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt 
-
-
 

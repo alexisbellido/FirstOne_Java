@@ -86,6 +86,7 @@ public class BinarySearch {
      * prints to standard output those integers that do <em>not</em> appear in the file.
      */
     public static void main(String[] args) {
+        System.out.println("Starting test");
 
         // read the integers from a file
         In in = new In(args[0]);
