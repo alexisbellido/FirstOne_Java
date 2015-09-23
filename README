@@ -1,1 +1,27 @@
 Java sample with IntelliJ IDEA
+
+[~/IdeaProjects/FirstProject/out/production/FirstProject]
+alexis@xenomorph$ java -cp /home/alexis/IdeaProjects/FirstProject/out/production/FirstProject com.zinibu.basic.Example
+Hi
+toyota 1997
+
+[~/IdeaProjects/FirstProject/out/production/FirstProject]
+alexis@xenomorph$ java -cp . com.zinibu.basic.Example
+Hi
+toyota 1997
+
+See http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html , focus on:
+When classes are stored in a directory (folder), like c:\java\MyClasses\utility\myapp, then the class path entry points to the directory that contains the first element of the package name. (in this case, C:\java\MyClasses, since the package name is utility.myapp.)
+
+Two ways of running algs4 so far:
+
+recommended, passing classpath via -cp:
+java -cp /home/alexis/IdeaProjects/FirstOne/lib/algs4.jar edu.princeton.cs.algs4.BinarySearch ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt 
+
+using CLASSPATH environment variable
+export CLASSPATH=/home/alexis/IdeaProjects/FirstOne/lib/algs4.jar
+echo $CLASSPATH
+java edu.princeton.cs.algs4.BinarySearch ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt 
+
+
+

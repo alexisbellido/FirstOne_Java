@@ -61,7 +61,7 @@ public class FirstSample {
         System.out.println(Arrays.toString(myNumbers));
 
         if (args.length > 0) {
-            System.out.println("String[] args to see what was passed from command line:");
+            System.out.println("String[] args 1to see what was passed from command line:");
             System.out.println(Arrays.toString(args));
         }
 
