@@ -29,6 +29,20 @@ java -cp "/home/alexis/IdeaProjects/FirstOne/out/production/FirstOne:/home/alexi
 
 I have the class with the main method in both algs4.jar and as in /home/alexis/IdeaProjects/FirstOne/src and that's important to indicate the order of class paths is important.
 
+Another example:
+Running from the parent directory where the classes are, in this example: /home/alexis/IdeaProjects/FirstOne/out/production
+alexis@xenomorph$ pwd
+/home/alexis/Learn/FirstOne_Java/out/production/FirstOne_Java
+[~/Learn/FirstOne_Java/out/production/FirstOne_Java] master
+alexis@xenomorph$ java -cp "/home/alexis/Learn/FirstOne_Java/out/production/FirstOne_Java:/home/alexis/Learn/FirstOne_Java/lib/algs4.jar" com.zinibu.algs4.BinarySearch /home/alexis/Learn/algs4/data/tinyW.txt < /home/alexis/Learn/algs4/data/tinyT.txt 
+Let's do some binary search
+And some initial tests
+50
+99
+13
+
+===
+
 2. Using CLASSPATH environment variable
 export CLASSPATH=/home/alexis/IdeaProjects/FirstOne/lib/algs4.jar
 echo $CLASSPATH
