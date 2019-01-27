@@ -76,7 +76,7 @@ public class BinarySearch {
      * prints to standard output those integers that do <em>not</em> appear in the file.
      */
     public static void main(String[] args) {
-        System.out.println("Let's do some binary search");
+        System.out.println("Start with some binary search");
         StdOut.println("And some initial tests");
 
         // read the integers from a file
