@@ -44,6 +44,46 @@ Linux:
 
 Read more about the `class path <http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html`>_.
 
+Tests with binary search
+------------------------------------------------------
+
+Change to the directory that contains the "root" package. This is the first package in the full package name; src/com/zinibu/algs4/BinarySearch.java uses two packages, *com* and *edu*, so this directory is *src*.
+
+.. code-block:: bash
+
+  $ pwd
+  /home/alexis/Projects/FirstOne_Java/src
+
+Compile using the default class path, the current directory (.), and that will create the required classes,
+
+.. code-block:: bash
+
+  $ javac com/zinibu/algs4/BinarySearch.java
+
+.. code-block:: bash
+
+  edu/princeton/cs/algs4/In.class
+  edu/princeton/cs/algs4/StdIn.class
+  edu/princeton/cs/algs4/StdOut.class
+  com/zinibu/algs4/BinarySearch.class
+
+and now you can run the BinarySearch class with
+
+.. code-block:: bash
+
+  $ java com.zinibu.algs4.BinarySearch  ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt
+  
+You can also compile using algs4.jar, which contains all the classes for the book (we're still in the *src* directory).
+
+.. code-block:: bash
+
+  $ javac -cp ../lib/algs4.jar com/zinibu/algs4/BinarySearch.java 
+  $ java -cp ../lib/algs4.jar:. com.zinibu.algs4.BinarySearch  ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt
+  
+In this case you need add the current directory (the dot at the end of *-cp ../lib/algs4.jar:.*) to the class path.
+
+-----------------------------------
+
 .. code-block:: bash
 
   [~/IdeaProjects/FirstProject/out/production/FirstProject]
