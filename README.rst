@@ -28,6 +28,20 @@ Multiple path entries are separated by semi-colons. With the set command, it's i
 
 The default class path is the current directory. Setting the CLASSPATH variable or using the -classpath command-line option overrides that default, so if you want to include the current directory in the search path, you must include "." in the new settings.
 
+When using multiple class paths, remember that the Windows path separator is ; and the Linux path separator is :.
+
+Windows:
+
+.. code-block:: bash
+
+  $ java -cp file.jar;dir/* my.app.ClassName
+
+Linux:
+
+.. code-block:: bash
+
+  $ java -cp file.jar:dir/* my.app.ClassName
+
 Read more about the `class path <http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html`>_.
 
 .. code-block:: bash
@@ -64,16 +78,16 @@ But, this is important, to provide more than one classpath, because I want to mo
 
   java -cp "/home/alexis/IdeaProjects/FirstOne/out/production/FirstOne:/home/alexis/IdeaProjects/FirstOne/lib/algs4.jar" edu.princeton.cs.algs4.BinarySearch ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt
 
-I have the class with the main method in both algs4.jar and as in /home/alexis/IdeaProjects/FirstOne/src and that's important to indicate the order of class paths is important.
+I have the class with the main method in both algs4.jar and /home/alexis/IdeaProjects/FirstOne/src so it's important to indicate the class paths order.
 
 Another example running from the parent directory where the classes are, in this example: /home/alexis/IdeaProjects/FirstOne/out/production
 
 .. code-block:: bash
 
-  alexis@xenomorph$ pwd
+  $ pwd
   /home/alexis/Learn/FirstOne_Java/out/production/FirstOne_Java
   [~/Learn/FirstOne_Java/out/production/FirstOne_Java] master
-  alexis@xenomorph$ java -cp "/home/alexis/Learn/FirstOne_Java/out/production/FirstOne_Java:/home/alexis/Learn/FirstOne_Java/lib/algs4.jar" com.zinibu.algs4.BinarySearch /home/alexis/Learn/algs4/data/tinyW.txt < /home/alexis/Learn/algs4/data/tinyT.txt 
+  $ java -cp "/home/alexis/Learn/FirstOne_Java/out/production/FirstOne_Java:/home/alexis/Learn/FirstOne_Java/lib/algs4.jar" com.zinibu.algs4.BinarySearch /home/alexis/Learn/algs4/data/tinyW.txt < /home/alexis/Learn/algs4/data/tinyT.txt 
 
 Let's do some binary search
 
