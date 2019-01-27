@@ -27,4 +27,13 @@ public class Vehicle {
     public String toString() {
         return getName();
     }
+
+    public static void main(String[] args) {
+        System.out.println("Vehicle class");
+        Plane myPlane = new Plane("Super Avion", 150);
+        System.out.println(myPlane.getName());
+        myPlane.setWings(3);
+        System.out.println("Number of wings: " + myPlane.getWings());
+    }
+
 }
