@@ -3,7 +3,7 @@ Java Examples
 
 See `repository <https://github.com/kevin-wayne/algs4>`_ with source code for Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne.
 
-This is how to compile a class in a package passing the current directory as the class path so other classes can be found. Note how the class is run with the java command using its qualified name (com.zinibu.common.FirstSample).
+This is how to compile a class in a package passing the current directory as the class path (for the sake of example as this is the default behavior) so other classes can be found. Note how the class is run with the java command using its qualified name (com.zinibu.common.FirstSample).
 
 .. code-block:: bash
 
@@ -12,9 +12,23 @@ This is how to compile a class in a package passing the current directory as the
   javac -cp . com/zinibu/common/FirstSample.java 
   java com.zinibu.common.FirstSample 
 
-See `<http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html`>_ , focus on:
+Another example.
 
-When classes are stored in a directory (folder), like /java/MyClasses/utility/myapp, then the class path entry points to the directory that contains the first element of the package name. (in this case, /java/MyClasses, since the package name is utility.myapp.)
+.. code-block:: bash
+
+  $ pwd
+  /home/alexis/Projects/FirstOne_Java/src
+  $ javac -cp ~/Projects/FirstOne_Java/src/ com/zinibu/algs4/QuickTest.java 
+  $ java com.zinibu.algs4.QuickTest 
+
+For a .jar or .zip file that contains .class files, the class path ends with the name of the .zip or .jar file.
+For .class files in an unnamed package, the class path ends with the directory that contains the .class files.
+For .class files in a named package, the class path ends with the directory that contains the "root" package (the first package in the full package name).
+Multiple path entries are separated by semi-colons. With the set command, it's important to omit spaces from around the equals sign (=).
+
+The default class path is the current directory. Setting the CLASSPATH variable or using the -classpath command-line option overrides that default, so if you want to include the current directory in the search path, you must include "." in the new settings.
+
+Read more about the `class path <http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html`>_.
 
 .. code-block:: bash
 
