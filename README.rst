@@ -162,3 +162,8 @@ And some initial tests
   export CLASSPATH=/home/alexis/IdeaProjects/FirstOne/lib/algs4.jar
   echo $CLASSPATH
   java edu.princeton.cs.algs4.BinarySearch ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt 
+
+Packages
+-------------------------
+
+For convenience, the Java compiler automatically imports two entire packages for each source file: (1) the java.lang package and (2) the current package (the package for the current file). Read more about `packages <https://docs.oracle.com/javase/tutorial/java/package/usepkgs.html>`_.
