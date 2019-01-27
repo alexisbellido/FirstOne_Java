@@ -10,7 +10,7 @@ See `repository <https://github.com/kevin-wayne/algs4>`_ with source code for Al
   Hi
   toyota 1997
 
-  .. code-block:: bash
+.. code-block:: bash
 
   [~/IdeaProjects/FirstProject/out/production/FirstProject]
   $ java -cp . com.zinibu.basic.Example
@@ -19,7 +19,7 @@ See `repository <https://github.com/kevin-wayne/algs4>`_ with source code for Al
 
 See `<http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html`>_ , focus on:
 
-When classes are stored in a directory (folder), like c:\java\MyClasses\utility\myapp, then the class path entry points to the directory that contains the first element of the package name. (in this case, C:\java\MyClasses, since the package name is utility.myapp.)
+When classes are stored in a directory (folder), like /java/MyClasses/utility/myapp, then the class path entry points to the directory that contains the first element of the package name. (in this case, /java/MyClasses, since the package name is utility.myapp.)
 
 Running algs4 classes from the command line:
 
