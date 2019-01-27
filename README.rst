@@ -30,6 +30,13 @@ And using the implicit current directory as the class path
   $ javac com/zinibu/algs4/QuickTest.java 
   $ java com.zinibu.algs4.QuickTest 
 
+A finally, compiling and running the original source code of the Algorithms book from the directory (*src*) containing the root of the package (*edu*). In this case there's no need to modify the class path because the current directory is used to the search by default.
+
+.. code-block:: bash
+
+  $ javac edu/princeton/cs/algs4/BinarySearch.java 
+  $ java edu.princeton.cs.algs4.BinarySearch ~/Downloads/algs4-data/tinyW.txt < ~/Downloads/algs4-data/tinyT.txt
+
 For a .jar or .zip file that contains .class files, the class path ends with the name of the .zip or .jar file.
 For .class files in an unnamed package, the class path ends with the directory that contains the .class files.
 For .class files in a named package, the class path ends with the directory that contains the "root" package (the first package in the full package name).
