@@ -22,3 +22,6 @@
 
 # IntelliJ
 /out/
+
+# vim
+*.sw[op]
