@@ -3,7 +3,9 @@ Java Examples
 
 See `repository <https://github.com/kevin-wayne/algs4>`_ with source code for Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne.
 
-This is how to compile a class in a package passing the current directory as the class path (for the sake of example as this is the default behavior) so other classes can be found. Note how the class is run with the java command using its qualified name (com.zinibu.common.FirstSample).
+This is how to compile a class in a package passing the current directory as the class path (for the sake of example as this is the default behavior) so other classes can be found.
+
+Note how the class is run with the java command using its qualified name (com.zinibu.common.FirstSample) and from the directory (*src*) containing the root of the package (*com*).
 
 .. code-block:: bash
 
@@ -19,6 +21,13 @@ Another example.
   $ pwd
   /home/alexis/Projects/FirstOne_Java/src
   $ javac -cp ~/Projects/FirstOne_Java/src/ com/zinibu/algs4/QuickTest.java 
+  $ java com.zinibu.algs4.QuickTest 
+
+And using the implicit current directory as the class path
+
+.. code-block:: bash
+
+  $ javac com/zinibu/algs4/QuickTest.java 
   $ java com.zinibu.algs4.QuickTest 
 
 For a .jar or .zip file that contains .class files, the class path ends with the name of the .zip or .jar file.
