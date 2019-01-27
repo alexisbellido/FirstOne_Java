@@ -3,6 +3,19 @@ Java Examples
 
 See `repository <https://github.com/kevin-wayne/algs4>`_ with source code for Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne.
 
+This is how to compile a class in a package passing the current directory as the class path so other classes can be found. Note how the class is run with the java command using its qualified name (com.zinibu.common.FirstSample).
+
+.. code-block:: bash
+
+  $ pwd
+  /home/alexis/Projects/FirstOne_Java/src
+  javac -cp . com/zinibu/common/FirstSample.java 
+  java com.zinibu.common.FirstSample 
+
+See `<http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html`>_ , focus on:
+
+When classes are stored in a directory (folder), like /java/MyClasses/utility/myapp, then the class path entry points to the directory that contains the first element of the package name. (in this case, /java/MyClasses, since the package name is utility.myapp.)
+
 .. code-block:: bash
 
   [~/IdeaProjects/FirstProject/out/production/FirstProject]
@@ -16,10 +29,6 @@ See `repository <https://github.com/kevin-wayne/algs4>`_ with source code for Al
   $ java -cp . com.zinibu.basic.Example
   Hi
   toyota 1997
-
-See `<http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html`>_ , focus on:
-
-When classes are stored in a directory (folder), like /java/MyClasses/utility/myapp, then the class path entry points to the directory that contains the first element of the package name. (in this case, /java/MyClasses, since the package name is utility.myapp.)
 
 Running algs4 classes from the command line:
 
